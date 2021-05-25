@@ -1,0 +1,29 @@
+<nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><i class="fa fa-cubes font-icon "></i> SMARTSOFT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav animate side-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="#" title="Dashboard" [routerLink]="['/product']"><i class="fa fa-dashboard font-icon"></i> Dashboard <i class="fa fa-dashboard font-icon shortmenu animate"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" title="Cart" [routerLink]="['/create-product']"><i class="fa fa-plus font-icon"></i> Crear Producto <i class="fa fa-plus font-icon shortmenu animate"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" title="Comment" [routerLink]="['/search-product']"><i class="fa fa-search font-icon"></i> Buscar Producto <i class="fa fa-search font-icon shortmenu animate"></i></a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-md-auto d-md-flex">
+        <li class="nav-item">
+        <a class="nav-link" href="#" [routerLink]="['/profile']" ><i class="fa fa-user font-icon"></i> </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#" (click) ="logout()"><i class=" fa fa-sign-out font-icon"></i> </a>
+        </li>
+    </ul>
+    </div>
+</nav>
+    

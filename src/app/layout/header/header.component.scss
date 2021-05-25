@@ -1,17 +1,6 @@
-@import "./_variables.scss";
-
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
-
-body{background:$colorGlobal ;}
-
-.font-icon {
-    font-size: 30px;
-    color : #3498DB;
-}
-
-#wrapper{
-    padding:90px 15px;
-}
+@import "../../../../variables";
+#wrapper{padding:90px 15px;}
 .navbar-expand-lg .navbar-nav.side-nav{
     flex-direction: column;
 }
@@ -65,3 +54,11 @@ body{background:$colorGlobal ;}
     border-bottom: 1px solid #50575d;
 }
 
+.font-icon {
+    font-size: 30px;
+    color : #3498DB;
+}
+
+.font-span {
+    font-size: 15px;
+}

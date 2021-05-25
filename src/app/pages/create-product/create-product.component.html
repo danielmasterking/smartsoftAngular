@@ -1,0 +1,37 @@
+<div id="wrapper" class="animate">
+    <app-header></app-header>
+    
+    <div class="container-fluid">
+
+        <h1>Crear nuevo Producto</h1>
+
+        <form [formGroup]="productForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="">Nombre*</label>
+                    <input type="text" class="form-control" formControlName="nombre" required autofocus>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="">Categoria*</label>
+                    <input type="text" class="form-control" formControlName="categoria" required autofocus>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="">Precio*</label>
+                    <input type="number" class="form-control" formControlName="precio" required autofocus>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="">Inventario*</label>
+                    <input type="number" class="form-control" formControlName="inventario" required autofocus>
+                </div>
+            </div>
+            <br>
+            <button class="btn btn-success" (click)="submit()">Guardar</button>
+        </form>
+
+    </div>
+</div>

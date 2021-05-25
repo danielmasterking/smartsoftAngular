@@ -1,0 +1,61 @@
+<div id="wrapper" class="animate">
+    <app-header></app-header>
+
+    <app-form-register *ngFor="let product of products" [idProduct] = 'product.id' (RecargarDatos)="getProductsReload($event)"></app-form-register>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">
+                          <i class="fa fa-search"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Buscar..."  (keyup)="searchProduct($event)">
+                </div>
+
+                
+            </div>
+        </div>
+
+        <a href="#" [routerLink]="['/create-product']" class="btn btn-success"><i class="fa fa-plus"></i> Nuevo producto</a>
+        <br><br>
+        
+        <div class="row table-responsive">
+            <div class="col-md-12">
+                <table class="table table-striped table-product">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Categoria</th>
+                            <th>Precio</th>
+                            <th>Inventario</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of products">
+                            <td>{{product.id}}</td>
+                            <td>{{product.nombre}}</td>
+                            <td>{{product.categoria}}</td>
+                            <td>{{product.precio}}</td>
+                            <td>{{product.inventario}}</td>
+                            <td>
+                                <a href="#" title="Editar" data-toggle="modal"  (click) ="editar(product.id)">
+                                    <i class="fa fa-edit icon-dimension"></i>
+                                </a>
+
+                                <a  title="Eliminar" (click) ="deleteProduct(product.id);">
+                                    <i class="fa fa-trash icon-dimension"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
