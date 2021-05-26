@@ -32,7 +32,7 @@ export class UserRegisterComponent implements OnInit {
   submit() {
     const formValue = this.registerForm.value;
     let password = this.registerForm.value.password;
-    let passwordRepeat = document.getElementById("passwordRepeat").value;
+    let passwordRepeat = ((document.getElementById("passwordRepeat") as HTMLInputElement).value);
     alert(password)
     alert(passwordRepeat)
     if(password != passwordRepeat) {
