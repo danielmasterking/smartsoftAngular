@@ -24,6 +24,11 @@ export class AuthenticateService {
     return this.http.post(url, data);
   }
 
+  getUser(id:number){
+    let url:string = `${environment.ApiUrl}/users/${id}`
+    return this.http.get(url, this.getHeaders());
+  }
+
   private getHeaders(): Object {
     const headers = new HttpHeaders()
     .set(
