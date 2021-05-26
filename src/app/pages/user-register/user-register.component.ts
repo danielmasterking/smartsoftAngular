@@ -33,8 +33,7 @@ export class UserRegisterComponent implements OnInit {
     const formValue = this.registerForm.value;
     let password = this.registerForm.value.password;
     let passwordRepeat = ((document.getElementById("passwordRepeat") as HTMLInputElement).value);
-    alert(password)
-    alert(passwordRepeat)
+    
     if(password != passwordRepeat) {
       alert('Las contraseñas no coinciden');
     }else if (this.registerForm.valid) {
