@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { LoginInfo } from '../models/login-info';
 
@@ -17,5 +17,23 @@ export class AuthenticateService {
 
   loggedIn() {
     return !!localStorage.getItem('token');
+  }
+
+  createUser(data) {
+    let url:string = `${environment.ApiUrl}/users`
+    return this.http.post(url, data);
+  }
+
+  private getHeaders(): Object {
+    const headers = new HttpHeaders()
+    .set(
+      'token',
+      localStorage.getItem('token')
+    );
+    const httpOptions = {
+      headers
+    };
+
+    return httpOptions;
   }
 }

@@ -5,6 +5,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
 import { SearchProductComponent } from './pages/search-product/search-product.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { UserRegisterComponent } from './pages/user-register/user-register.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'product',component: ProductComponent ,  canActivate: [AuthGuard]},
   { path: 'create-product',component: CreateProductComponent ,  canActivate: [AuthGuard]},
   { path: 'search-product',component: SearchProductComponent ,  canActivate: [AuthGuard]},
-  { path: 'profile',component: ProfileComponent ,  canActivate: [AuthGuard]}
+  { path: 'profile',component: ProfileComponent ,  canActivate: [AuthGuard]},
+  { path: 'register',component: UserRegisterComponent ,  canActivate: [LoginGuard]}
 ];
 
 @NgModule({
